@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+      span
+{
+	
+	height: 100%;
+	font-size: 18px;
+}
+
+.red {
+  background-color: #FEFF86;
+  border-left: 6px solid #F97B22;
+  text-align: center;
+}
+#current-date, #current-day, #current-time {
+  font-weight: bold;
+}
+
+    </style>
+  </head>
+  <body>
+  
+ <%- include('partials/header.ejs') %>
+    
+
+  
+  <aside id="sidebar-wrapper">
+    <div class="sidebar-brand">
+      <h2>ADMIN PANEL</h2>
+    </div>
+    <nav class="main-nav" role="navigation">
+    <ul class="sidebar-nav unstyled list-hover-slide">
+      <!--<li class="active">-->
+      <li>
+        <a  href="/facultyView"><i class="fa fa-home" ></i> <img src="/images/tIcon.png">&nbsp;&nbsp;&nbsp;FACULTY</a>
+      </li>
+      <li>
+        <a href="/subjectadd"><i class="fa fa-plug"></i> <img src="/images/courseIc.png">&nbsp;&nbsp;&nbsp;COURSE</a>
+      </li>
+      <li>
+        <a href="/Roomlist"><i class="fa fa-user"></i>  <img src="/images/ic_classroom.png">&nbsp;&nbsp;&nbsp;CLASS Room</a>
+      </li>
+      <li>
+        <a href="/period"><i class="fa fa-user"></i><img src="/images/ic_enforce.png">&nbsp;&nbsp;&nbsp;PERIOD list</a>
+      </li>
+        <li>
+          <a href="/enfValue"><i class="fa fa-user"></i><img src="/images/ic_enforce.png">&nbsp;&nbsp;&nbsp;ASSIGN</a>
+        </li>
+        <li >
+          <a href="/generateTable"><i class="fa fa-user"></i><img src="/images/ic_generate.png">&nbsp;&nbsp;&nbsp;Time Table</a>
+        </li>
+        
+    </ul>
+    </nav>
+  </aside>
+
+    <div id="wrapper" class="nav-wrap">
+ 
+
+        
+      
+      <div id="navbar-wrapper">
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <h3 style="padding-right: 730px;color: black;">Dashboard</h3>
+            </div>
+            <div>
+              <p style="display: inline;"><span id="current-date"></span> <span id="current-day"></span></p>
+              <p style="display: inline;"> <span id="current-time"></span></p>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <marquee height="35" direction="left" SCROLLDELAY=20 behavior=scroll onmouseover="this.stop();" onmouseout="this.start();">
+        <div width="100%" class="div1"> 
+          <span class="red">&nbsp;&nbsp;Effortlessly manage your department's operations - Welcome to your Management System Dashboard.</span> 
+        </div>
+        </marquee>
+        
+        <br><br><br>
+        <div style="background-color: #F6FFDE;">
+          <div  class="container " style="padding-top: 17px;">
+            <center><h3>Dept. Statistics</h3><hr style="height: 2px;background-color: #E74646;border-color: #E74646;"></center><br>
+              <div class="row" style="padding: 13px;">
+                  <div class="col-md-6">
+                      <div class="card">
+                          <div class="card-body container card text-white bg-primary mb-3"  class="">
+                              <h1 class="text-center"> <h1 class="text-center"><%= totalrooms[0].totalFaculty %></h1></h1>
+                              <h3>Lecturers</h3>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="card">
+                          <div class="card-body card text-white bg-success mb-3" >
+                              <h1 class="text-center"> <h1 class="text-center"><%= totalrooms[0].totalSubjects %></h1> </h1>
+                              <h3>Subjects</h3>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="row" style="padding: 14px;">
+                  <div class="col-md-6">
+                      <div class="card">
+                          <div class="card-body card text-white bg-info mb-3">
+                              <h1 class="text-center"><%= totalrooms[0].totalRooms%></h1>
+                              
+                              <h3>Rooms</h3>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="card">
+                          <div class="card-body card text-white bg-secondary mb-3">
+                              <h1 class="text-center"> <h1 class="text-center"><%= totalrooms[0].totalPeriods %></h1></h1>
+                              <h3>Periods</h3>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <%- include('partials/footer.ejs') %>
+      <script>
+  // Get the current date and time
+  const now = new Date();
+  
+  // Extract the date, day, and time
+  const currentDate = now.toLocaleDateString();
+  const currentDay = now.toLocaleDateString('en-US', { weekday: 'long' });
+  // Insert the values into the placeholders
+  document.getElementById('current-date').textContent = currentDate;
+  document.getElementById('current-day').textContent = currentDay;
+  function updateTime() {
+    // Get the current time
+    const now = new Date();
+    const currentTime = now.toLocaleTimeString();
+    
+    // Insert the current time into the placeholder
+    document.getElementById('current-time').textContent = currentTime;
+  }
+  
+  // Update the time every second
+  setInterval(updateTime, 1000);
+</script>
+   </body>
+</html>

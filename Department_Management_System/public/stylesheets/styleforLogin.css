@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body {
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+  font-family: 'Poppins', sans-serif;
+}
+.modal-login {
+  color: #636363;
+  width: 350px;
+  position: relative;
+  top: 55px;
+}
+.modal-login .modal-content {
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+}
+.modal-login .modal-header {
+  border-bottom: none;
+      position: relative;
+      justify-content: center;
+}
+.modal-login h4 {
+  text-align: center;
+  font-size: 26px;
+  margin: 30px 0 -15px;
+}
+.modal-login .form-control:focus {
+  border-color: #70c5c0;
+}
+.modal-login .form-control, .modal-login .btn {
+  min-height: 40px;
+  border-radius: 3px;
+}
+.modal-login .close {
+      position: absolute;
+  top: -5px;
+  right: -5px;
+}
+.modal-login .modal-footer {
+  background: #ecf0f1;
+  border-color: #dee4e7;
+  text-align: center;
+      justify-content: center;
+  margin: 0 -20px -20px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+.modal-login .modal-footer a {
+  color: #999;
+}
+#rectangle{
+    width:200px;
+    height:100px;
+    background:#f3f3f3;
+}
+  
+
+.dropdown
+{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.modal-login .avatar {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: -20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: 9;
+
+  padding: 15px;
+}
+.modal-login .avatar img {
+  width: 100%;
+}
+
+.modal-login.modal-dialog {
+  margin-top: 80px;
+}
+  .modal-login .btn {
+      color: #fff;
+      border-radius: 4px;
+  background: green;
+  text-decoration: none;
+  transition: all 0.4s;
+      line-height: normal;
+      border: none;
+  }
+.modal-login .btn:hover, .modal-login .btn:focus {
+  background: purple;
+  outline: none;
+}
+.trigger-btn {
+  display: inline-block;
+  margin: 100px auto;
+}

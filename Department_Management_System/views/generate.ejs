@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     
+    <title>Generate view</title>
+   
+  </head>
+  <body>
+  
+   
+    <%- include('partials/header.ejs') %>
+    <div id="wrapper">
+
+      <aside id="sidebar-wrapper">
+        <div class="sidebar-brand">
+          <h2>ADMIN PANEL</h2>
+        </div>
+        <nav class="main-nav" role="navigation">
+        <ul class="sidebar-nav unstyled list-hover-slide">
+          <li >
+            <a  href="/facultyView"><i class="fa fa-home" ></i> <img src="/images/tIcon.png">&nbsp;&nbsp;&nbsp;FACULTY</a>
+          </li>
+          <li>
+            <a href="/subjectadd"><i class="fa fa-plug"></i> <img src="/images/courseIc.png">&nbsp;&nbsp;&nbsp;COURSE</a>
+          </li>
+          <li>
+            <a href="/Roomlist"><i class="fa fa-user"></i>  <img src="/images/ic_classroom.png">&nbsp;&nbsp;&nbsp;CLASS Room</a>
+          </li>
+          <li>
+            <a href="/period"><i class="fa fa-user"></i><img src="/images/ic_enforce.png">&nbsp;&nbsp;&nbsp;PERIOD list</a>
+          </li>
+            <li >
+              <a href="/enfValue"><i class="fa fa-user"></i><img src="/images/ic_enforce.png">&nbsp;&nbsp;&nbsp;ASSIGN</a>
+            </li>
+            <li class="active">
+              <a href="/generateTable"><i class="fa fa-user"></i><img src="/images/ic_generate.png">&nbsp;&nbsp;&nbsp;Time Table</a>
+            </li>
+            
+        </ul>
+        </nav>
+      </aside>
+      
+      <div id="navbar-wrapper">
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <h3 style="color: black;">Generate Time Table </h3>
+              
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      
+      
+      <div class="container"> 
+        
+        <form style="margin-top: 30px;" action="/createTable" method="post" autocomplete="off">
+        <div   class="form-group">
+          <br><br><br><br><br>
+          <input   style="width: 40%; " name="semister" required="required"  placeholder="Room Id" list=semister_editors > </input>
+          <datalist  id="semister_editors">
+          <select  class="form-control"   id="semister">
+            <% for(var i=0; i < semister.length; i++) { %>
+              <option ><%= semister[i].roomId %> </option>
+              <% } %>
+            </select>
+          </datalist>
+
+          
+                  
+
+
+
+
+
+
+                <button style="float: right;" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+    
+    </div>
+
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

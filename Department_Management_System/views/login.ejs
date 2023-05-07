@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+
+  <%- include('partials/headerLogin.ejs') %>.
+
+
+
+  <body style="width:100%;height:100vh;background: linear-gradient(to right, #adf7f2, #15aaff);background-position: center;background-size: cover;position: relative;">
+    <div class="container">
+      <div class="modal-dialog modal-login" >
+        <div class="modal-content" style="opacity: 90%; background-color: black;">
+          <br>
+          <div class="modal-header" >
+            <div>
+                <img class="avatar"  src="/images/avatar.png"  alt="Avatar" >
+            </div>
+            <br>
+          </div>
+            <h4 class="modal-title text-white" style="font-size: 20px;position: relative;bottom: 5px;font-weight: bold;">Admin Login</h4>
+            <br>
+          <div class="modal-body">
+            <form action="submitLogin" method="POST" autocomplete="off">
+              <div class="form-group">
+                <input type="text" class="form-control" name="username" placeholder="Username" required="required">
+              </div>
+              <div class="form-group">
+                <input type="pasword" class="form-control" name="password" placeholder="Password" required="required">
+              </div>
+
+
+             
+                <button type="submit" id="login" class="btn btn-primary btn-lg btn-block login-btn" style="font-weight: bold;">Login</button>
+              
+            </form>
+          </div>
+
+          <div class="modal-footer" style="opacity: 90%; background-color: black;">
+
+            <a href="#" class="text-white">Forgot Password?</a>
+          </div>
+        </div>
+      </div>
+
+
+   </div>
+
+
+    </div>
+ 
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <%- include('partials/footer.ejs') %>
+   </body>
+</html>

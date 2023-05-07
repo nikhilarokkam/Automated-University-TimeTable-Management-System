@@ -1,0 +1,15 @@
+{
+  "name": "mochatesh",
+  "version": "1.0.0",
+  "description": "simple app for testing",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha" 
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3"
+  }
+}
