@@ -1,1 +1,1 @@
-# ACADEMIC-PERIOD-SCHEDULING-SYSTEM
+# Automated University Time Table Management System
