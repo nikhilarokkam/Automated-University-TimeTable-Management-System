@@ -25,7 +25,7 @@ router.get("/facultyView",function(req,res){
     
 
 
- /* CRUD FOR  FACULTIES */
+    /* CRUD FOR  FACULTIES */
     /* Add */
 
     router.post("/addFaculty",function(request,response){

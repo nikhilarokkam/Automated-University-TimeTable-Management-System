@@ -13,7 +13,7 @@ var period = require('./periods/period');
 var enforce = require('./enforce/enforceValue'); 
 var user = require('./user/user'); 
 var genTimeTalbe = require('./timeTable/genTimeTable');
-var timeTable = require('./timeTable/timeTable');
+var timeTable = require('./timeTable/timetable');
 var login = require('./login/login');
 
 
