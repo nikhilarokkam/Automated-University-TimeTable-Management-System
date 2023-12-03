@@ -63,3 +63,5 @@ Before running the project, make sure you have [XAMPP](https://www.apachefriends
 ### Admin Login
 ![screencapture-localhost-3000-login-2023-12-03-08_28_37](https://github.com/nikhilarokkam/Automated-University-TimeTable-Management-System/assets/115566678/fef5b5f1-a3f7-432a-bb09-fc3ea575ab24)
 ### Dashboard
+![screencapture-localhost-3000-detailView-2023-12-03-08_30_48](https://github.com/nikhilarokkam/Automated-University-TimeTable-Management-System/assets/115566678/bb07833a-fe6d-429d-ab31-d57cc059f65e)
+### Faculty Management
