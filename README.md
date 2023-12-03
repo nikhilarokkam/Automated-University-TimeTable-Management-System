@@ -58,3 +58,8 @@ Before running the project, make sure you have [XAMPP](https://www.apachefriends
   <li>Ensure that MySQL is running, as the project relies on it for database operations.</li>
   <li>You can now proceed with running the Node.js application using the steps mentioned above.</li>
 </ol>
+
+## Screenshots
+### Admin Login
+![screencapture-localhost-3000-login-2023-12-03-08_28_37](https://github.com/nikhilarokkam/Automated-University-TimeTable-Management-System/assets/115566678/fef5b5f1-a3f7-432a-bb09-fc3ea575ab24)
+### Dashboard
